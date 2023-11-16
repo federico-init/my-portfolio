@@ -23,6 +23,20 @@ const textVariants = {
   },
 };
 
+const sliderVariants = {
+  initial: {
+    x: 0,
+  },
+  animate: {
+    x: "-100%",
+    transition: {
+      repeat: Infinity,
+      repeatType: "mirror",
+      duration: 50,
+    },
+  },
+};
+
 const Hero = () => {
   return (
     <div className="hero">
@@ -49,9 +63,14 @@ const Hero = () => {
           />
         </motion.div>
       </div>
-      <div className="slidingTextContainer">
-        React.js Next.js Javascript Typescript Sass Tailwind.css CSS HTML
-      </div>
+      <motion.div
+        className="slidingTextContainer"
+        variants={sliderVariants}
+        initial="initial"
+        animate="animate"
+      >
+        React.js Javascript Typescript Next.js Sass Tailwind.css CSS HTML
+      </motion.div>
       <div className="imageContainer">
         <img src="/hero.png" alt="hero image" />
       </div>
