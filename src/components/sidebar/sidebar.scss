@@ -13,6 +13,7 @@
     left: 0;
     width: 400px;
     background: white;
+    z-index: 9;
 
     .links {
       position: absolute;
@@ -43,5 +44,6 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    z-index: 9;
   }
 }
